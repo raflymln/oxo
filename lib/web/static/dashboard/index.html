@@ -1,0 +1,386 @@
+<!-- -
+Created By Rafly Maulana
+Licensed By Self Licensing
+- -->
+<html>
+
+<head>
+
+    <title>OxO | Dashboard</title>
+    <link rel="icon" href="/img/logo-transparent.png">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+    <link rel="stylesheet" href="/css/dashboard.css">
+
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div>
+            <img src="/img/logo-transparent.png" width="80">
+            <p>Please Wait <span id="preloader_dot"></span></p>
+        </div>
+    </div>
+
+    <!-- Header Menu -->
+    <header>
+        <div id='logo'>
+            <a href="#!">
+                <img src="/img/logo-transparent.png">
+            </a>
+        </div>
+
+        <nav id='main'>
+            <a href='#!' id='close'>X</a>
+            <a data-tab='overview'>Overview</a>
+            <a data-tab='settings'>Settings</a>
+            <a data-tab='customcommands'>Custom Commands</a>
+        </nav>
+
+        <nav id='mobile'><a href='#!'>&#9776;</a></nav>
+
+    </header>
+
+    <!-- #Tab Home -->
+    <main data-tab="overview">
+
+        <div id='guildicon' data-tag="guildbanner">
+            <img data-tag="guildlogo">
+        </div>
+
+        <br><br>
+
+        <form id="overview">
+
+            <h1 data-tag="guildname"></h1>
+
+            <br>
+
+            <h2>Guild Overview</h2>
+            <div style="overflow-x: auto;">
+                <table id="guildinfo">
+
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Data</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                    </tbody>
+
+                </table>
+            </div>
+
+            <br>
+
+            <h2>OxO Settings</h2>
+            <h5><a href='#!' data-tab="settings">[ CONFIGURE HERE ]</a></h5>
+            <div style="overflow-x: auto;">
+                <table id="oxosettings">
+
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Data</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                    </tbody>
+
+                </table>
+            </div>
+
+        </form>
+
+        <br><br>
+
+    </main>
+
+    <!-- #Tab Settings -->
+    <main data-tab="settings">
+
+        <div id='guildicon' data-tag="guildbanner">
+            <img data-tag="guildlogo">
+        </div>
+
+        <br><br>
+
+        <form id="settings" onsubmit='Settings.Update();'>
+
+            <h1 data-tag="guildname"></h1>
+            <p>Refresh If You Didn't See Your Guild Channel List!</p>
+
+            <br>
+
+            <h2>Join Channel (ID)</h2>
+            <select data-setting="join_channel" id="join_channel">
+              <option value="" selected>None</option>
+            </select>
+
+            <!-- - -->
+
+            <h2>Leave Channel (ID)</h2>
+            <select data-setting="leave_channel" id="leave_channel">
+              <option value="" selected>None</option>
+            </select>
+
+            <!-- - -->
+
+            <h2>Join Message</h2>
+            <input data-setting="join_message" type="checkbox" data-child="settings_joinmessage"> Enable/Disable
+            <textarea data-setting="join_message" id="join_message" placeholder="Write Your Message Here!" data-parent="settings_joinmessage" maxlength="2000"></textarea>
+
+            <!-- - -->
+
+            <h2>Leave Message</h2>
+            <input data-setting="leave_message" type="checkbox" data-child="settings_leavemessage"> Enable/Disable
+            <textarea data-setting="leave_message" id="leave_message" placeholder="Write Your Message Here!" data-parent="settings_leavemessage" maxlength="2000"></textarea>
+
+            <!-- - -->
+
+            <h2>Private Join Message</h2>
+            <input data-setting="join_pm" type="checkbox" data-child="settings_pmjoin"> Enable/Disable
+            <textarea data-setting="join_pm" id="join_pm" placeholder="Write Your Message Here!" data-parent="settings_pmjoin" maxlength="2000"></textarea>
+
+            <!-- - -->
+
+            <h2>Private Leave Message</h2>
+            <input data-setting="leave_pm" type="checkbox" data-child="settings_pmleave"> Enable/Disable
+            <textarea data-setting="leave_pm" id="leave_pm" placeholder="Write Your Message Here!" data-parent="settings_pmleave" maxlength="2000"></textarea>
+
+            <!-- - -->
+
+            <h2>Join Card</h2>
+            <input data-setting="join_card" id="join_card" type="checkbox"> Enable/Disable
+            <br>
+            <a data-setting="join_card" data-tab="settings">
+                <input data-setting="join_card" type='button' value='(Disabled) Please Update It First!'>
+            </a>
+
+            <!-- - -->
+
+            <h2>Leave Card</h2>
+            <input data-setting="leave_card" id="leave_card" type="checkbox"> Enable/Disable
+            <br>
+            <a data-setting="leave_card" data-tab="settings">
+                <input data-setting="leave_card" type='button' value='(Disabled) Please Update It First!'>
+            </a>
+
+            <!-- - -->
+            <br><br>
+            <button style="background: #578c57 !important;" onclick="Events.Emit('guildMemberAdd')">Test Join</button>
+
+            <br>
+            <button style="background: #4a88cf !important;" onclick="Events.Emit('guildMemberRemove')">Test Leave</button>
+
+            <!-- - -->
+            <br><br>
+            <button type="submit">UPDATE</button>
+
+        </form>
+
+        <br><br>
+
+    </main>
+
+    <!-- #Tab Custom Commands -->
+    <main data-tab="customcommands">
+
+        <div id='guildicon' data-tag="guildbanner">
+            <img data-tag="guildlogo">
+        </div>
+
+        <br><br>
+
+        <form id="customcommands" onsubmit="CustomCommands.New()">
+
+            <h1 data-tag="guildname"></h1>
+
+            <br>
+
+            <h2>Custom Commands</h2>
+            <br>
+            <p>To Trigger It, Simply Write:</p>
+            <center><pre>{prefix} !{yourcommand}</pre></center>
+            <br>
+
+            <div style="overflow-x: auto;">
+
+                <table id="guildcustomcommands">
+
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Data</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                    </tbody>
+
+                </table>
+
+                <br><br>
+                <p>Custom Command Must Start With"!"</p>
+                <br>
+
+                <table>
+
+                    <tbody>
+                        <tr id='commandsADD'>
+                            <td>
+                                Add New:<br>
+                                <input id="newcommand" placeholder="!newcommand" type="text">
+                                <br>
+                                <textarea id="newcommandcontent" placeholder="Your Command Content" style="height: auto;"></textarea>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+
+            <button type="submit">Add New</button>
+
+
+        </form>
+
+        <br><br>
+
+    </main>
+
+    <!-- #Tab Join Card [HIDDEN] -->
+    <main data-tab='join_card'>
+
+        <img data-card='join_card' src="https://via.placeholder.com/800x300?text=Refresh%20If%20You%20See%20This!">
+
+        <form id="join_card" onsubmit='Card.Update("join_card")'>
+
+            <br><br>
+
+            <h1><u>Join Card</u> 🎴</h1>
+
+            <br>
+
+            <h2>Background</h2>
+            <p>URL</p>
+            <input type="text" data-card='join_card-background' required>
+
+            <br>
+
+            <h2>Greeting Text</h2>
+            <p>Font Color</p>
+            <input type="color" data-card='join_card-text_color' required>
+            <p>Content</p>
+            <input type="text" maxlength="15" data-card='join_card-text_content' required>
+            <p>Font Size</p>
+            <input type="number" data-card='join_card-text_size' required>
+
+            <br>
+
+            <h2>User Name</h2>
+            <p>Font Color</p>
+            <input type="color" data-card='join_card-username_color' required>
+            <p>Font Size</p>
+            <input type="number" data-card='join_card-username_size' required>
+
+            <br>
+
+            <h2>User Image</h2>
+            <p>Border Color</p>
+            <input type="color" data-card='join_card-userimage_bordercolor' required>
+            <p>Image Size</p>
+            <input type="number" data-card='join_card-userimage_size' required>
+
+            <br><br>
+
+            <button type="submit">UPDATE</button>
+
+        </form>
+
+        <br><br>
+
+    </main>
+
+    <!-- #Tab Leave Card [HIDDEN] -->
+    <main data-tab='leave_card'>
+
+        <img data-card='leave_card' src="https://via.placeholder.com/800x300?text=Refresh%20If%20You%20See%20This!">
+
+        <form id="leave_card" onsubmit='Card.Update("leave_card")'>
+
+            <br><br>
+
+            <h1><u>Leave Card</u> 🎴</h1>
+
+            <br>
+
+            <h2>Background</h2>
+            <p>URL</p>
+            <input type="text" data-card='leave_card-background' required>
+
+            <br>
+
+            <h2>Greeting Text</h2>
+            <p>Font Color</p>
+            <input type="color" data-card='leave_card-text_color' required>
+            <p>Content</p>
+            <input type="text" maxlength="15" data-card='leave_card-text_content' required>
+            <p>Font Size</p>
+            <input type="number" data-card='leave_card-text_size' required>
+
+            <br>
+
+            <h2>User Name</h2>
+            <p>Font Color</p>
+            <input type="color" data-card='leave_card-username_color' required>
+            <p>Font Size</p>
+            <input type="number" data-card='leave_card-username_size' required>
+
+            <br>
+
+            <h2>User Image</h2>
+            <p>Border Color</p>
+            <input type="color" data-card='leave_card-userimage_bordercolor' required>
+            <p>Image Size</p>
+            <input type="number" data-card='leave_card-userimage_size' required>
+
+            <br><br>
+
+            <button type="submit">UPDATE</button>
+
+        </form>
+
+        <br><br>
+
+    </main>
+
+    <!-- Scripts -->
+    <script defer>
+        const preloader = window.setInterval(function() {
+
+            var wait = document.getElementById("preloader_dot");
+
+            if (wait.innerHTML.length === 6) wait.innerHTML = "";
+            else wait.innerHTML += ". ";
+
+        }, 1000);
+    </script>
+
+    <script src="https://cdn.socket.io/socket.io-2.3.0.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <script src="/js/jquery-1.11.1.js"></script>
+
+    <script defer src='/js/dashboard/main.js'></script>
+    <script defer src='/js/dashboard/socket/index.js'></script>
+
+</body>
+
+</html>

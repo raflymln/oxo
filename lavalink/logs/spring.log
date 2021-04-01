@@ -1,0 +1,6 @@
+2020-12-27 01:08:16.560  INFO 16868 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:61995 -- CloseStatus[code=1006, reason=]
+2020-12-27 01:08:16.570  INFO 16868 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2020-12-27 01:08:18.499  INFO 16868 --- [XNIO-1 task-3] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:60421
+2020-12-27 01:08:18.505  INFO 16868 --- [XNIO-1 task-3] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:60421
+2020-12-27 02:03:09.663  INFO 16868 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:60421 -- CloseStatus[code=1006, reason=]
+2020-12-27 02:03:09.673  INFO 16868 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.

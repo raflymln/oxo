@@ -1,0 +1,69 @@
+{
+  "703245245315416184": {
+    "loop": true,
+    "tracklist": [
+      {
+        "user": {
+          "username": "RAFLYMLN",
+          "discriminator": "1945",
+          "id": "231721153444446208"
+        },
+        "thumbnail": "https://img.youtube.com/vi/iS1g8G_njx8/0.jpg",
+        "track": "QAAAnwIAOEFyaWFuYSBHcmFuZGUgZnQuIElnZ3kgQXphbGVhIC0gUHJvYmxlbSAoT2ZmaWNpYWwgVmlkZW8pAA1BcmlhbmEgR3JhbmRlAAAAAAADLIAAC2lTMWc4R19uang4AAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9aVMxZzhHX25qeDgAB3lvdXR1YmUAAAAAAAAAAA==",
+        "info": {
+          "identifier": "iS1g8G_njx8",
+          "isSeekable": true,
+          "author": "Ariana Grande",
+          "length": 208000,
+          "isStream": false,
+          "position": 0,
+          "title": "Ariana Grande ft. Iggy Azalea - Problem (Official Video)",
+          "uri": "https://www.youtube.com/watch?v=iS1g8G_njx8"
+        }
+      },
+      {
+        "user": {
+          "username": "RAFLYMLN",
+          "discriminator": "1945",
+          "id": "231721153444446208"
+        },
+        "thumbnail": "https://img.youtube.com/vi/8BQqX3bUqtY/0.jpg",
+        "track": "QAAAlgIAN0RpcGxvIC0gR2V0IEl0IFJpZ2h0IChmZWF0LiBNw5gpIChPZmZpY2lhbCBNdXNpYyBWaWRlbykABURpcGxvAAAAAAACq5gACzhCUXFYM2JVcXRZAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9OEJRcVgzYlVxdFkAB3lvdXR1YmUAAAAAAAAAAA==",
+        "info": {
+          "identifier": "8BQqX3bUqtY",
+          "isSeekable": true,
+          "author": "Diplo",
+          "length": 175000,
+          "isStream": false,
+          "position": 0,
+          "title": "Diplo - Get It Right (feat. MØ) (Official Music Video)",
+          "uri": "https://www.youtube.com/watch?v=8BQqX3bUqtY"
+        }
+      }
+    ]
+  },
+  "766886720942899264": {
+    "loop": false,
+    "tracklist": [
+      {
+        "user": {
+          "username": "Bobb",
+          "discriminator": "4378",
+          "id": "741513434092404796"
+        },
+        "thumbnail": "https://img.youtube.com/vi/I-QfPUz1es8/0.jpg",
+        "track": "QAAAggIAGkltYWdpbmUgRHJhZ29ucyAtIEJhZCBMaWFyAA5JbWFnaW5lRHJhZ29ucwAAAAAABFVgAAtJLVFmUFV6MWVzOAABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PUktUWZQVXoxZXM4AAd5b3V0dWJlAAAAAAAAAAA=",
+        "info": {
+          "identifier": "I-QfPUz1es8",
+          "isSeekable": true,
+          "author": "ImagineDragons",
+          "length": 284000,
+          "isStream": false,
+          "position": 0,
+          "title": "Imagine Dragons - Bad Liar",
+          "uri": "https://www.youtube.com/watch?v=I-QfPUz1es8"
+        }
+      }
+    ]
+  }
+}

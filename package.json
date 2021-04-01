@@ -1,0 +1,37 @@
+{
+    "name": "oxo",
+    "version": "1.0.0",
+    "description": "**You Don't Know OxO?** Well... OxO was Your Friendly Discord Bot, Designed to Help Your Stuff on Discord, or Even, Your Life. Created with  by [Rafly Maulana](http://raflymaulana.com/).",
+    "main": "bot.js",
+    "directories": {
+        "lib": "lib"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@raflymln/eris": "github:raflymln/eris",
+        "@raflymln/fbs": "^1.0.0",
+        "@raflymln/mongochrome": "github:raflymln/mongochrome",
+        "@raflymln/musixmatch-lyrics": "^1.0.1",
+        "@vitalets/google-translate-api": "^4.0.0",
+        "axios": "^0.21.1",
+        "canvacord": "^5.0.8",
+        "canvas": "^2.6.1",
+        "chokidar": "^3.4.3",
+        "core-js": "^3.8.1",
+        "crypto": "^1.0.1",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "fs": "0.0.1-security",
+        "md5": "^2.3.0",
+        "mongoose": "^5.11.7",
+        "path": "^0.12.7",
+        "pretty-ms": "^7.0.1",
+        "simpleflakes": "^2.1.0",
+        "snowflake-id": "^1.1.0",
+        "socket.io": "^2.3.0"
+    }
+}

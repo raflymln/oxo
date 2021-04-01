@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+/* MAIN */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: #09031E;
+}
+
+hr {
+    width: 80%;
+}
+
+* {
+    font-family: 'Secular One', sans-serif;
+    box-sizing: border-box;
+}
+
+*:focus,
+*:active {
+    outline: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+img {
+    max-width: 100%;
+}
+
+pre {
+    background: #332f2f;
+    width: fit-content;
+    text-align: center;
+    color: white;
+    padding: 10;
+    font-size: 15;
+    border-radius: 5px;
+    font-family: monospace;
+}
+
+
+/* HEADER */
+
+header {
+    position: fixed;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: black;
+    color: #fff !important;
+    z-index: 999;
+    padding: 5px 25px;
+    -webkit-box-shadow: 0px 10px 5px -3px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 10px 5px -3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 10px 5px -3px rgba(0, 0, 0, 0.3);
+}
+
+header #menubtn {
+    transition: 0.8s;
+}
+
+header #menubtn:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+header #logo:hover {
+    cursor: pointer;
+}
+
+header #logo img {
+    height: 50px;
+    object-fit: cover;
+}
+
+header #icon a img {
+    max-height: 40px !important;
+    height: auto;
+    width: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    border: solid 2px white
+}
+
+header nav#main {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    align-items: center;
+    padding: 5px 25px;
+}
+
+header nav#main a {
+    margin: 0 10px;
+    opacity: 0.7;
+}
+
+header nav#main a.active {
+    opacity: 1;
+    border-bottom: solid 3px white;
+}
+
+header nav#main a:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+header nav#mobile a {
+    color: #fff;
+    text-decoration: none;
+    display: none;
+    z-index: 99999;
+}
+
+header nav#main a#close {
+    position: fixed;
+    top: 4%;
+    right: 4%;
+    color: #fff;
+    text-decoration: none;
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    header nav#main {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        justify-content: center;
+        flex-direction: column;
+        background: black;
+    }
+    header nav#main a#close {
+        display: initial;
+    }
+    header nav#main a {
+        transform: scale(1.2);
+        line-height: 40px;
+    }
+    header nav#main a.active {
+        border-bottom: none
+    }
+    header nav#mobile a {
+        display: initial;
+    }
+}
+
+
+/* MAIN */
+
+main {
+    display: none;
+    width: 80%;
+    max-width: 800px;
+    margin-top: 120px !important;
+    margin: 50px;
+    box-shadow: 2px 2px 4px #000000;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    background: whitesmoke;
+}
+
+@media screen and (max-width: 720px) {
+    main {
+        width: 90%;
+        margin: 30px;
+    }
+}
+
+main #guildicon {
+    width: 100%;
+    padding: 50px;
+    max-height: 300px;
+    max-width: 800px;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main #guildicon img {
+    border: solid 1px white
+}
+
+input,
+button {
+    transition: 0.8s;
+}
+
+input:disabled,
+textarea:disabled,
+select:disabled,
+button:disabled {
+    opacity: 0.5;
+    transition: 0.8s;
+}
+
+input:disabled:hover,
+select:disabled:hover,
+textarea:disabled:hover,
+button:disabled:hover {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+
+/* FORM */
+
+form {
+    width: 80%;
+}
+
+form * {
+    margin: 10px 0;
+}
+
+form p {
+    color: grey;
+    padding: 2px;
+    margin: 0 !important;
+}
+
+form input[type="color"] {
+    -webkit-appearance: none;
+    border: none;
+    height: 32px;
+    width: 80%;
+}
+
+form input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+form input[type="color"]::-webkit-color-swatch {
+    border-radius: 15px;
+}
+
+form input[type=text],
+form input[type=number],
+form input[type=url],
+form select {
+    padding: 5px 25px;
+    background: #ccc;
+    border: none;
+    border-radius: 15px;
+    width: 80%;
+}
+
+form input[type=button] {
+    padding: 5px 25px;
+    background: #ccc;
+    border: none;
+    border-radius: 15px;
+    width: 80%;
+    transition: 0.8s;
+}
+
+form input[type=button]:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+form textarea {
+    padding: 25px;
+    background: #ccc;
+    border: none;
+    border-radius: 15px;
+    width: 80%;
+    resize: vertical;
+    height: 200px;
+}
+
+form button {
+    border: none;
+    border-radius: 15px;
+    background-color: #09031E !important;
+    padding: 8px 25px;
+    width: 100%;
+    color: #fff !important;
+    transition: 0.8s;
+}
+
+form button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+
+/* [Custom Form] */
+
+#settings textarea {
+    display: none;
+}
+
+
+/* TABLE 
+-- Source: https://codepen.io/AllThingsSmitty/pen/MyqmdM
+*/
+
+table {
+    border: 1px solid rgb(179, 176, 176);
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+    letter-spacing: 0.5px;
+}
+
+table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+}
+
+table tr {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: .35em;
+    transition: 0.8s;
+}
+
+table#updates tr:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+table th {
+    padding: .625em;
+    text-align: center;
+}
+
+table td {
+    padding: .625em;
+    text-align: left;
+}
+
+table td:first-child {
+    font-weight: bold;
+}
+
+table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+table#guildcustomcommands td {
+    text-align: center !important;
+}
+
+tr#commandsADD td {
+    text-align: center;
+}
+
+@media screen and (max-width: 720px) {
+    table {
+        border: 0;
+    }
+    table caption {
+        font-size: 1.3em;
+    }
+    table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+    table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+    }
+    table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: left;
+    }
+    table td::before {
+        /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    table td:last-child {
+        border-bottom: 0;
+    }
+}
+
+
+/* LOADER */
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: #09031E;
+    text-align: center;
+    /* display: none; */
+}
+
+.preloader div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font: 14px arial;
+    color: white;
+}
